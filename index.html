@@ -1,34 +1,49 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html dir="rtl" lang="fa">
 <head>
     <meta charset="UTF-8">
-    <title>GOLDEXIR | سیستم درآمدزایی هوشمند</title>
-    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOLDEXIR | سیستم درآمدزایی طلایی</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
 </head>
 <body class="home-page">
-    <!-- نوار ناوبری -->
-    <nav class="gold-nav">
-        <a href="index.html" class="active">خانه</a>
-        <a href="wallet.html">کیف پول</a>
-        <a href="ads.html">تبلیغات</a>
-        <a href="packages.html">بسته‌ها</a>
-        <a href="support.html">پشتیبانی</a>
-    </nav>
+    <!-- هدر با افکت طلایی -->
+    <header class="gold-header">
+        <div class="particles"></div>
+        <nav class="glass-nav">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo.png" alt="GOLDEXIR">
+            </a>
+            <div class="nav-links">
+                <a href="wallet.html" class="nav-item">کیف پول</a>
+                <a href="ads.html" class="nav-item">تبلیغات روزانه</a>
+                <a href="packages.html" class="nav-item">بسته‌های ویژه</a>
+                <a href="support.html" class="nav-item">پشتیبانی</a>
+            </div>
+        </nav>
+        
+        <div class="hero-section">
+            <h1 class="gold-text">ثروت خود را <span class="highlight">ضربدر ۱۰</span> کنید</h1>
+            <div class="register-form glass-card">
+                <h3>عضویت فوری + ۵ تتر هدیه</h3>
+                <form id="registerForm">
+                    <input type="text" placeholder="نام کاربری" class="gold-input">
+                    <input type="password" placeholder="رمز عبور" class="gold-input">
+                    <input type="text" placeholder="کد معرف (اختیاری)" class="gold-input">
+                    <button type="submit" class="pulse-btn">شروع کن</button>
+                </form>
+            </div>
+        </div>
+    </header>
 
-    <!-- محتوای اصلی -->
-    <div class="container">
-        <div class="register-box">
-            <h2>ثبت‌نام در سیستم</h2>
-            <form id="registerForm">
-                <input type="text" placeholder="نام کاربری" required>
-                <input type="password" placeholder="رمز عبور" required>
-                <input type="text" placeholder="کد معرف (اختیاری)">
-                <button type="submit">عضویت و دریافت ۵ تتر هدیه</button>
-            </form>
+    <!-- بخش اطلاع‌رسانی زنده -->
+    <div class="live-notifications">
+        <div class="marquee">
+            <span>کاربر علی ۸۰ تتر واریز کرد • کاربر سارا ۱۲۰ تتر برداشت کرد • کاربر محمد به سطح الماس ارتقا یافت</span>
         </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
