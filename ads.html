@@ -1,25 +1,14 @@
-<!-- سیستم کلیک بر تبلیغات -->
-<div style="text-align: center;">
-    <h2 style="color: gold;">تبلیغات امروز</h2>
-    <p>امروز 10 از 10 کلیک باقی مانده</p>
-    
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 30px;">
-        <!-- تبلیغات نمونه -->
-        <div style="border: 1px solid gold; padding: 15px; cursor: pointer;" onclick="earn(0.2)">
-            <img src="https://via.placeholder.com/150x100?text=Ad+1" width="100%">
-            <p>کلیک کنید: 0.2 تتر</p>
-        </div>
-        <!-- 9 تبلیغ دیگر به همین شکل -->
-    </div>
-</div>
+<body class="ads-page">
+    <nav class="gold-nav">...</nav>
 
-<script>
-let clicksLeft = 10;
-function earn(amount) {
-    if(clicksLeft > 0) {
-        alert(`0.2 تتر به کیف پول شما اضافه شد! (${--clicksLeft} کلیک باقی مانده)`);
-    } else {
-        alert('سقف کلیک روزانه شما تکمیل شد!');
-    }
-}
-</script>
+    <div class="container">
+        <div class="ads-grid">
+            <!-- تبلیغات دینامیک -->
+            <div class="ad-item" data-value="0.2">
+                <img src="ads/ad1.jpg" alt="تبلیغ ۱">
+                <button>کلیک کنید (+۰.۲ تتر)</button>
+            </div>
+            <!-- ۹ تبلیغ دیگر -->
+        </div>
+    </div>
+</body>
