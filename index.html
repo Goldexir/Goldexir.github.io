@@ -1,80 +1,76 @@
 <!DOCTYPE html>
-<html dir="rtl">
+<html dir="rtl" lang="fa">
 <head>
     <meta charset="UTF-8">
-    <title>Goldexir | دروازه طلایی ثروت</title>
+    <title>GOLDEXIR | سیستم درآمدزایی طلایی</title>
     <style>
+        /* طراحی لوکس طلایی-مشکی */
+        :root {
+            --gold: #FFD700;
+            --dark-gold: #C9B037;
+            --black: #121212;
+        }
         body {
-            background: #121212;
-            color: #FFD700;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            padding: 0;
-            margin: 0;
+            font-family: 'Tahoma';
+            background: var(--black);
+            color: white;
         }
-        .header {
-            background: #000;
-            padding: 30px;
-            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+        .header-bar {
+            background: linear-gradient(90deg, var(--black), var(--dark-gold));
+            height: 40px;
+            overflow: hidden;
+            white-space: nowrap;
         }
-        .gold-btn {
-            background: #FFD700;
-            color: #121212;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 50px;
-            font-size: 18px;
-            font-weight: bold;
-            margin: 30px;
-            cursor: pointer;
-            transition: all 0.3s;
+        .marquee {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+            color: var(--gold);
         }
-        .gold-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px #FFD700;
-        }
-        .features {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 50px auto;
-            max-width: 900px;
-        }
-        .feature-box {
-            background: rgba(255, 215, 0, 0.1);
-            border: 1px solid #FFD700;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 15px;
-            width: 250px;
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Goldexir</h1>
-        <p>پلتفرم نخبگان مالی | راهی به سوی ثروت پایدار</p>
-    </div>
-
-    <button class="gold-btn">شروع سفر طلایی</button>
-
-    <div class="features">
-        <div class="feature-box">
-            <h3>مشاوره اختصاصی</h3>
-            <p>برنامه‌ریزی مالی شخصی‌سازی شده</p>
-        </div>
-        <div class="feature-box">
-            <h3>آموزش‌های حرفه‌ای</h3>
-            <p>دوره‌های طلایی سرمایه‌گذاری</p>
-        </div>
-        <div class="feature-box">
-            <h3>پشتیبانی 24/7</h3>
-            <p>همراهی مستمر کارشناسان</p>
+    <!-- نوار اطلاع‌رسانی -->
+    <div class="header-bar">
+        <div class="marquee">
+            کاربر محمد 80 تتر واریز کرد • کاربر علی 120 تتر برداشت کرد • کاربر سارا به سطح الماس ارتقا یافت •
         </div>
     </div>
 
-    <footer style="background: #000; padding: 20px; margin-top: 50px;">
-        <p>Goldexir.github.io © 2023 | کلیه حقوق محفوظ است</p>
-    </footer>
+    <!-- فرم ثبت‌نام -->
+    <div style="max-width: 500px; margin: 50px auto; padding: 20px; border: 1px solid var(--gold);">
+        <h2 style="color: var(--gold);">ثبت‌نام در Goldexir</h2>
+        <form id="registerForm">
+            <input type="text" placeholder="نام کاربری" required style="width: 100%; padding: 10px; margin: 10px 0;">
+            <input type="password" placeholder="رمز عبور" required style="width: 100%; padding: 10px; margin: 10px 0;">
+            <input type="text" placeholder="کد معرف (اختیاری)" style="width: 100%; padding: 10px; margin: 10px 0;">
+            <button type="submit" style="background: var(--gold); color: black; padding: 10px 20px; border: none; cursor: pointer;">
+                ثبت‌نام و دریافت 5 تتر هدیه
+            </button>
+        </form>
+    </div>
+
+    <!-- معرفی سیستم -->
+    <div style="max-width: 800px; margin: 0 auto; padding: 20px; text-align: center;">
+        <h3 style="color: var(--gold);">سیستم درآمدزایی Goldexir</h3>
+        <p>با عضویت در سیستم ما می‌توانید از طریق:</p>
+        <ul style="text-align: right; list-style-type: square;">
+            <li>کلیک بر روی تبلیغات (دریافت 0.2 تتر به ازای هر کلیک)</li>
+            <li>معرفی دوستان (دریافت 3 تتر به ازای هر معرفی)</li>
+            <li>ارتقاء به بسته‌های ویژه (کاهش کارمزد و افزایش سقف برداشت)</li>
+        </ul>
+    </div>
+
+    <script>
+        // اسکریپت ثبت‌نام
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('ثبت‌نام با موفقیت انجام شد! 5 تتر به کیف پول شما اضافه شد.');
+            window.location.href = 'wallet.html';
+        });
+    </script>
 </body>
 </html>
