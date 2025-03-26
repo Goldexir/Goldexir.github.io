@@ -1,0 +1,37 @@
+/* طراحی حرفه‌ای پس‌زمینه‌ها */
+.home-page {
+    background: url('bg-home.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.wallet-page {
+    background: url('bg-wallet.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.ads-page {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('bg-ads.jpg');
+}
+
+/* نوار ناوبری طلایی */
+.gold-nav {
+    background: linear-gradient(90deg, #121212, #FFD700);
+    padding: 15px;
+    text-align: center;
+}
+
+.gold-nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* کارت‌های حرفه‌ای */
+.wallet-card, .register-box {
+    background: rgba(18, 18, 18, 0.8);
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
