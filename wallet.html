@@ -1,15 +1,15 @@
-<!-- کد کامل کیف پول -->
-<div style="max-width: 800px; margin: 50px auto; padding: 20px; border: 1px solid gold;">
-    <h2 style="color: gold;">کیف پول شما</h2>
-    <p>موجودی: <span id="balance">25</span> تتر</p>
-    <p>کد معرف شما: <strong>GOLD1234</strong></p>
+<body class="wallet-page">
+    <nav class="gold-nav">...</nav>
     
-    <h3 style="color: gold;">برداشت وجه</h3>
-    <form id="withdrawForm">
-        <input type="text" placeholder="آدرس کیف پول TRC20" required style="width: 100%; padding: 10px; margin: 10px 0;">
-        <input type="number" placeholder="مبلغ (حداقل 80 تتر)" min="80" required style="width: 100%; padding: 10px; margin: 10px 0;">
-        <button type="submit" style="background: gold; color: black; padding: 10px 20px; border: none; cursor: pointer;">
-            درخواست برداشت (کارمزد 10%)
-        </button>
-    </form>
-</div>
+    <div class="container">
+        <div class="wallet-card">
+            <h3>موجودی: <span id="balance">0</span> تتر</h3>
+            <div class="withdraw-form">
+                <h4>برداشت وجه</h4>
+                <input type="text" placeholder="آدرس TRC20">
+                <input type="number" placeholder="مبلغ (حداقل ۸۰ تتر)">
+                <button>درخواست برداشت</button>
+            </div>
+        </div>
+    </div>
+</body>
