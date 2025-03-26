@@ -1,76 +1,34 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html dir="rtl" lang="fa">
 <head>
     <meta charset="UTF-8">
-    <title>GOLDEXIR | سیستم درآمدزایی طلایی</title>
-    <style>
-        /* طراحی لوکس طلایی-مشکی */
-        :root {
-            --gold: #FFD700;
-            --dark-gold: #C9B037;
-            --black: #121212;
-        }
-        body {
-            font-family: 'Tahoma';
-            background: var(--black);
-            color: white;
-        }
-        .header-bar {
-            background: linear-gradient(90deg, var(--black), var(--dark-gold));
-            height: 40px;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-        .marquee {
-            display: inline-block;
-            animation: marquee 20s linear infinite;
-            color: var(--gold);
-        }
-        @keyframes marquee {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-    </style>
+    <title>GOLDEXIR | سیستم درآمدزایی هوشمند</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-    <!-- نوار اطلاع‌رسانی -->
-    <div class="header-bar">
-        <div class="marquee">
-            کاربر محمد 80 تتر واریز کرد • کاربر علی 120 تتر برداشت کرد • کاربر سارا به سطح الماس ارتقا یافت •
+<body class="home-page">
+    <!-- نوار ناوبری -->
+    <nav class="gold-nav">
+        <a href="index.html" class="active">خانه</a>
+        <a href="wallet.html">کیف پول</a>
+        <a href="ads.html">تبلیغات</a>
+        <a href="packages.html">بسته‌ها</a>
+        <a href="support.html">پشتیبانی</a>
+    </nav>
+
+    <!-- محتوای اصلی -->
+    <div class="container">
+        <div class="register-box">
+            <h2>ثبت‌نام در سیستم</h2>
+            <form id="registerForm">
+                <input type="text" placeholder="نام کاربری" required>
+                <input type="password" placeholder="رمز عبور" required>
+                <input type="text" placeholder="کد معرف (اختیاری)">
+                <button type="submit">عضویت و دریافت ۵ تتر هدیه</button>
+            </form>
         </div>
     </div>
 
-    <!-- فرم ثبت‌نام -->
-    <div style="max-width: 500px; margin: 50px auto; padding: 20px; border: 1px solid var(--gold);">
-        <h2 style="color: var(--gold);">ثبت‌نام در Goldexir</h2>
-        <form id="registerForm">
-            <input type="text" placeholder="نام کاربری" required style="width: 100%; padding: 10px; margin: 10px 0;">
-            <input type="password" placeholder="رمز عبور" required style="width: 100%; padding: 10px; margin: 10px 0;">
-            <input type="text" placeholder="کد معرف (اختیاری)" style="width: 100%; padding: 10px; margin: 10px 0;">
-            <button type="submit" style="background: var(--gold); color: black; padding: 10px 20px; border: none; cursor: pointer;">
-                ثبت‌نام و دریافت 5 تتر هدیه
-            </button>
-        </form>
-    </div>
-
-    <!-- معرفی سیستم -->
-    <div style="max-width: 800px; margin: 0 auto; padding: 20px; text-align: center;">
-        <h3 style="color: var(--gold);">سیستم درآمدزایی Goldexir</h3>
-        <p>با عضویت در سیستم ما می‌توانید از طریق:</p>
-        <ul style="text-align: right; list-style-type: square;">
-            <li>کلیک بر روی تبلیغات (دریافت 0.2 تتر به ازای هر کلیک)</li>
-            <li>معرفی دوستان (دریافت 3 تتر به ازای هر معرفی)</li>
-            <li>ارتقاء به بسته‌های ویژه (کاهش کارمزد و افزایش سقف برداشت)</li>
-        </ul>
-    </div>
-
-    <script>
-        // اسکریپت ثبت‌نام
-        document.getElementById('registerForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('ثبت‌نام با موفقیت انجام شد! 5 تتر به کیف پول شما اضافه شد.');
-            window.location.href = 'wallet.html';
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
